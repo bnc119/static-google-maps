@@ -1,7 +1,7 @@
 /*
 body {
 	
-	 margin: 0;
+	 
      background: url('http://images5.fanpop.com/image/photos/31600000/Jessowey-s-Fave-Australian-Icons-Landmarks-pinkmare-and-jessowey-31617126-1280-800.jpg');
 
      background-size: 1440px 800px;
@@ -10,3 +10,9 @@ body {
      font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 */
+
+.container {
+
+	width: 500px;
+
+}
