@@ -1,10 +1,6 @@
 <h1>Listing Landmarks</h1>
 
 
-
-
-
-
 <div class="form-search">
   <div class="input-append">
     <%= form_tag locations_path, :method => :get do %>
@@ -40,4 +36,6 @@
 
 <br />
 
-<%= link_to 'New Location', new_location_path %>
+<h3>
+<%= link_to 'Add New Landmark', new_location_path %>
+</h3>
