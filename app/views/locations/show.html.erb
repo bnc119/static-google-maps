@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Address:</b>
+  <%= @location.address %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @location.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @location.longitude %>
+</p>
+
+<% unless @location.latitude.nil? %>
+	<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C#{@location.latitude},#{@location.longitude}&sensor=false" %>
+
+	<h3> Nearby Locations </h3>
+	<ul>
+	<% for location in @location.nearbys(10) %>
+		<li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
+
+	<% end %>
+	</ul>
+<% end %>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
